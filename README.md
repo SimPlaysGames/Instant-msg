@@ -4,7 +4,7 @@ An instant messageing program based on the tutorial from TheNewBoston's "Java - 
 https://thenewboston.com/videos.php?cat=25&video=17767
 
 TODO: 
-- Fix so sockets close properly
+- Make it so sockets also close when pressing exit
 - Add multi client function
 
 IDEAS:

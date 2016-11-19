@@ -44,6 +44,7 @@ public class Client extends JFrame{
 
         add(userText, BorderLayout.SOUTH);
         chatWindow = new JTextArea();
+        chatWindow.setEditable(false);
         add(new JScrollPane(chatWindow), BorderLayout.CENTER);
         setSize(300,150);
         setVisible(true);
@@ -117,7 +118,7 @@ public class Client extends JFrame{
     //Send messages
     private void sendMessage(String message){
         try{
-            output.writeObject("\nCLIENT - " + message);
+            output.writeObject("CLIENT - " + message);
             output.flush();
             showMessage("\nCLIENT - " + message);
         }
