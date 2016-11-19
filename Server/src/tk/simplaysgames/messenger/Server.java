@@ -41,11 +41,10 @@ public class Server extends JFrame{
         add(new JScrollPane(chatWindow));
         setSize(300, 150);
         setVisible(true);
-        startRunning();
     }
 
     //Set up and run the server
-    private void startRunning(){
+    public void startRunning(){
         try{
             server = new ServerSocket(6789, 100);
             while(true){
@@ -101,7 +100,7 @@ public class Server extends JFrame{
     }
 
     //Close streams and sockets when done
-    public void closeConnection(){
+    private void closeConnection(){
         showMessage("\n Closing connections... \n");
         ableToType(false);
         try{
@@ -117,7 +116,7 @@ public class Server extends JFrame{
     //Send a message to client
     private void sendMessage(String message){
         try{
-            output.writeObject("\nSERVER - " + message);
+            output.writeObject("SERVER - " + message);
             output.flush();
             showMessage("\nSERVER - " + message);
         }

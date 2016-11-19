@@ -117,7 +117,7 @@ public class Client extends JFrame{
     //Send messages
     private void sendMessage(String message){
         try{
-            output.writeObject("\nCLIENT - " + message);
+            output.writeObject("CLIENT - " + message);
             output.flush();
             showMessage("\nCLIENT - " + message);
         }
